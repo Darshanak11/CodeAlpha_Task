@@ -20,7 +20,6 @@ This repository contains all the projects, tasks, and assignments completed duri
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- React *(if applicable)*
 - Git & GitHub
 
 ---
