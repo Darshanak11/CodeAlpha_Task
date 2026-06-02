@@ -31,8 +31,6 @@
     section{padding:6rem 0}
     .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
     .reveal.visible{opacity:1;transform:none}
-
-    /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:all .4s}
     nav.scrolled{background:rgba(8,11,20,.88);border-color:var(--border);backdrop-filter:blur(20px)}
     .nav-logo{font-family:var(--ff-head);font-size:1.6rem;letter-spacing:.05em;color:var(--cyan);text-decoration:none}
@@ -48,8 +46,6 @@
     .mobile-menu.open{display:flex}
     .mobile-menu a{font-family:var(--ff-head);font-size:3rem;color:var(--white);text-decoration:none;letter-spacing:.05em;transition:color .3s}
     .mobile-menu a:hover{color:var(--cyan)}
-
-    /* HERO */
     #hero{min-height:100vh;display:flex;align-items:center;padding-top:5rem;position:relative}
     .hero-inner{position:relative;z-index:2}
     .hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--ff-mono);font-size:.78rem;color:var(--cyan);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;opacity:0;animation:fadeUp .6s var(--ease) .2s forwards}
@@ -73,13 +69,9 @@
     .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fadeUp .8s var(--ease) 1.6s forwards}
     .hero-scroll span{font-size:.7rem;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
     .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:scrollPulse 2s infinite}
-
-    /* SECTION TITLES */
     .section-label{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--ff-mono);font-size:.73rem;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}
     .section-label::before{content:'';display:block;width:20px;height:1px;background:var(--cyan)}
     .section-title{font-family:var(--ff-head);font-size:clamp(2.5rem,6vw,4.5rem);line-height:.95;letter-spacing:.02em;color:var(--white);margin-bottom:3rem}
-
-    /* ABOUT */
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
     .about-text p{color:var(--muted);line-height:1.9;margin-bottom:1.2rem;font-size:.95rem}
     .about-text p strong{color:var(--white);font-weight:600}
@@ -91,8 +83,6 @@
     .stat-card:hover::before{opacity:1}
     .stat-number{font-family:var(--ff-head);font-size:3rem;color:var(--cyan);line-height:1;margin-bottom:.3rem}
     .stat-label{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-
-    /* SKILLS */
     #skills{background:var(--bg2)}
     .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
     .skill-group{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:1.8rem;backdrop-filter:blur(10px);transition:border-color .3s,transform .3s,box-shadow .3s}
@@ -102,8 +92,27 @@
     .skill-tags{display:flex;flex-wrap:wrap;gap:.5rem}
     .skill-tag{padding:.3rem .8rem;border-radius:3px;background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.15);font-size:.77rem;color:var(--white);font-family:var(--ff-mono);transition:background .3s,border-color .3s,color .3s}
     .skill-tag:hover{background:rgba(0,229,255,.15);border-color:var(--cyan);color:var(--cyan)}
-
-    /* PROJECTS */
+    /* EXPERIENCE */
+    #experience{background:var(--bg3)}
+    .exp-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:2.2rem 2.5rem;position:relative;overflow:hidden;backdrop-filter:blur(10px);transition:border-color .4s,box-shadow .4s,transform .4s var(--ease);max-width:800px}
+    .exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+    .exp-card:hover{border-color:rgba(0,229,255,.35);transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,.45),var(--glow)}
+    .exp-card:hover::before{transform:scaleX(1)}
+    .exp-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.6rem}
+    .exp-left{display:flex;align-items:center;gap:1.2rem}
+    .exp-logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(0,229,255,.1),rgba(124,58,237,.2));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+    .exp-company{font-family:var(--ff-head);font-size:1.8rem;color:var(--white);letter-spacing:.03em;line-height:1}
+    .exp-type{font-family:var(--ff-mono);font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:.3rem}
+    .exp-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;border-radius:20px;background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.2);font-family:var(--ff-mono);font-size:.7rem;color:var(--cyan);letter-spacing:.08em;white-space:nowrap;flex-shrink:0}
+    .exp-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:pulseDot 2s infinite;flex-shrink:0}
+    .exp-role{font-size:1.05rem;font-weight:600;color:var(--white);margin-bottom:.4rem}
+    .exp-duration{font-family:var(--ff-mono);font-size:.75rem;color:var(--muted);margin-bottom:1.3rem;display:flex;align-items:center;gap:.5rem}
+    .exp-duration::before{content:'';display:block;width:14px;height:1px;background:var(--muted)}
+    .exp-desc{font-size:.9rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem}
+    .exp-desc strong{color:var(--white);font-weight:500}
+    .exp-skills{display:flex;flex-wrap:wrap;gap:.5rem}
+    .exp-skill{padding:.28rem .75rem;border-radius:3px;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);font-size:.75rem;color:#a78bfa;font-family:var(--ff-mono)}
+    .exp-meta{font-family:var(--ff-mono);font-size:.68rem;color:rgba(107,122,153,.38);margin-top:1.3rem;padding-top:1rem;border-top:1px solid rgba(0,229,255,.06);letter-spacing:.06em}
     .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
     .project-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:2rem;position:relative;overflow:hidden;backdrop-filter:blur(10px);transition:border-color .3s,transform .4s var(--ease),box-shadow .3s}
     .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
@@ -119,8 +128,6 @@
     .project-link:hover{gap:.8rem}
     .project-link .arrow{transition:transform .3s}
     .project-link:hover .arrow{transform:translateX(4px)}
-
-    /* EDU */
     #edu{background:var(--bg2)}
     .edu-cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
     .timeline{position:relative}
@@ -137,8 +144,6 @@
     .cert-icon{flex-shrink:0;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem}
     .cert-name{font-size:.9rem;font-weight:500;color:var(--white)}
     .cert-issuer{font-size:.78rem;color:var(--muted);margin-top:.2rem}
-
-    /* CONTACT */
     #contact{text-align:center;position:relative}
     .contact-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(124,58,237,.08) 0%,transparent 70%);pointer-events:none}
     .contact-email{display:inline-block;font-family:var(--ff-head);font-size:clamp(1.5rem,4vw,3rem);color:var(--white);text-decoration:none;letter-spacing:.03em;margin-bottom:2.5rem;transition:color .3s}
@@ -146,21 +151,17 @@
     .contact-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap}
     .contact-link{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.5rem;border-radius:4px;border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:.82rem;font-family:var(--ff-mono);letter-spacing:.05em;transition:all .3s}
     .contact-link:hover{border-color:var(--cyan);color:var(--cyan);box-shadow:var(--glow)}
-
-    /* FOOTER */
     footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:.78rem;color:var(--muted);font-family:var(--ff-mono);position:relative;z-index:2}
     footer span{color:var(--cyan)}
-
-    /* ANIMATIONS */
     @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
     @keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
-
-    /* RESPONSIVE */
+    @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.65)}}
     @media(max-width:900px){
       .about-grid,.edu-cert-grid{grid-template-columns:1fr;gap:3rem}
       .skills-grid{grid-template-columns:1fr 1fr}
       .projects-grid{grid-template-columns:1fr}
+      .exp-header{flex-direction:column;gap:.8rem}
     }
     @media(max-width:600px){
       .nav-links{display:none}
@@ -168,20 +169,20 @@
       .skills-grid{grid-template-columns:1fr}
       .about-stats{grid-template-columns:1fr 1fr}
       .hero-ctas{flex-direction:column;align-items:flex-start}
+      .exp-card{padding:1.5rem 1.3rem}
     }
   </style>
 </head>
 <body>
-
 <div class="cursor-glow" id="cursorGlow"></div>
 <canvas id="bg-canvas"></canvas>
 
-<!-- NAV -->
 <nav id="nav">
   <a href="#hero" class="nav-logo">DK</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#edu">Education</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -193,12 +194,12 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="closeMobile()">About</a>
   <a href="#skills" onclick="closeMobile()">Skills</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
   <a href="#projects" onclick="closeMobile()">Projects</a>
   <a href="#edu" onclick="closeMobile()">Education</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
 
-<!-- HERO -->
 <section id="hero">
   <div class="wrap">
     <div class="hero-inner">
@@ -229,7 +230,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="wrap">
     <div class="reveal">
@@ -253,7 +253,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="wrap">
     <div class="reveal">
@@ -261,62 +260,56 @@
       <h2 class="section-title">Tech Stack</h2>
     </div>
     <div class="skills-grid reveal">
-      <div class="skill-group">
-        <div class="skill-group-icon">🧠</div>
-        <div class="skill-group-title">Languages</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span><span class="skill-tag">Java</span>
-          <span class="skill-tag">C</span><span class="skill-tag">C++</span>
-          <span class="skill-tag">C#</span><span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">SQL</span>
+      <div class="skill-group"><div class="skill-group-icon">&#x1F9E0;</div><div class="skill-group-title">Languages</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">C</span><span class="skill-tag">C++</span><span class="skill-tag">C#</span><span class="skill-tag">JavaScript</span><span class="skill-tag">SQL</span></div></div>
+      <div class="skill-group"><div class="skill-group-icon">&#x1F310;</div><div class="skill-group-title">Web Technologies</div><div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Flask</span><span class="skill-tag">ASP.NET MVC</span><span class="skill-tag">.NET Core</span></div></div>
+      <div class="skill-group"><div class="skill-group-icon">&#x2601;&#xFE0F;</div><div class="skill-group-title">Cloud &amp; Networking</div><div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Cloud Fundamentals</span><span class="skill-tag">Network Security</span><span class="skill-tag">Cisco</span></div></div>
+      <div class="skill-group"><div class="skill-group-icon">&#x1F5C4;&#xFE0F;</div><div class="skill-group-title">Databases</div><div class="skill-tags"><span class="skill-tag">MySQL</span><span class="skill-tag">MS SQL Server</span><span class="skill-tag">DBMS</span></div></div>
+      <div class="skill-group"><div class="skill-group-icon">&#x1F6E0;&#xFE0F;</div><div class="skill-group-title">Tools</div><div class="skill-tags"><span class="skill-tag">GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">Visual Studio 2022</span><span class="skill-tag">SSMS</span></div></div>
+      <div class="skill-group"><div class="skill-group-icon">&#x1F4DA;</div><div class="skill-group-title">Core Concepts</div><div class="skill-tags"><span class="skill-tag">OOP</span><span class="skill-tag">Computer Networks</span><span class="skill-tag">DBMS</span><span class="skill-tag">Web Technologies</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-label">Where I've Worked</div>
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="reveal">
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-left">
+            <div class="exp-logo">&#x1F4BB;</div>
+            <div>
+              <div class="exp-company">CodeAlpha</div>
+              <div class="exp-type">Software Development Organisation &nbsp;&middot;&nbsp; Remote</div>
+            </div>
+          </div>
+          <div class="exp-badge"><span class="exp-dot"></span>Active &nbsp;&middot;&nbsp; May – Jun 2026</div>
         </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-icon">🌐</div>
-        <div class="skill-group-title">Web Technologies</div>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span>
-          <span class="skill-tag">JavaScript</span><span class="skill-tag">Flask</span>
-          <span class="skill-tag">ASP.NET MVC</span><span class="skill-tag">.NET Core</span>
+        <div class="exp-role">Frontend Development Intern</div>
+        <div class="exp-duration">20th May 2026 &mdash; 20th June 2026</div>
+        <p class="exp-desc">
+          Selected for a <strong>Frontend Development Internship</strong> at CodeAlpha — a hands-on programme focused on building real-world engineering skills. Working on assigned UI features and frontend components, applying core web technologies with emphasis on clean structure, responsiveness, and user experience. The role involves orientation sessions, learning new skills through practical application, and delivering work to a professional standard within a collaborative team environment.
+        </p>
+        <div class="exp-skills">
+          <span class="exp-skill">HTML5</span>
+          <span class="exp-skill">CSS3</span>
+          <span class="exp-skill">JavaScript</span>
+          <span class="exp-skill">UI Development</span>
+          <span class="exp-skill">Frontend Design</span>
+          <span class="exp-skill">Responsive Web</span>
         </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-icon">☁️</div>
-        <div class="skill-group-title">Cloud &amp; Networking</div>
-        <div class="skill-tags">
-          <span class="skill-tag">AWS</span><span class="skill-tag">Cloud Fundamentals</span>
-          <span class="skill-tag">Network Security</span><span class="skill-tag">Cisco</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-icon">🗄️</div>
-        <div class="skill-group-title">Databases</div>
-        <div class="skill-tags">
-          <span class="skill-tag">MySQL</span><span class="skill-tag">MS SQL Server</span>
-          <span class="skill-tag">DBMS</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-icon">🛠️</div>
-        <div class="skill-group-title">Tools</div>
-        <div class="skill-tags">
-          <span class="skill-tag">GitHub</span><span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Visual Studio 2022</span><span class="skill-tag">SSMS</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-icon">📚</div>
-        <div class="skill-group-title">Core Concepts</div>
-        <div class="skill-tags">
-          <span class="skill-tag">OOP</span><span class="skill-tag">Computer Networks</span>
-          <span class="skill-tag">DBMS</span><span class="skill-tag">Web Technologies</span>
+        <div class="exp-meta">
+          Offer letter dated 15th May 2026 &nbsp;&middot;&nbsp; Student ID: CA/DF1/77623 &nbsp;&middot;&nbsp; Issued by Swati Srivastava, Founder &amp; CEO
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="wrap">
     <div class="reveal">
@@ -329,21 +322,15 @@
         <div class="project-date">March 2026</div>
         <h3 class="project-title">Mangalore Bus Finder</h3>
         <p class="project-desc">A user-friendly web application that helps commuters identify bus routes between two points, or discover stops on a specific bus route across Mangalore. Solves a real navigation problem with a clean, intuitive interface.</p>
-        <div class="project-tech">
-          <span class="tech-badge">Python</span><span class="tech-badge">Flask</span>
-          <span class="tech-badge">HTML</span><span class="tech-badge">CSS</span>
-        </div>
-        <a href= target="_blank" class="project-link">View on GitHub <span class="arrow">&#x2192;</span></a>
+        <div class="project-tech"><span class="tech-badge">Python</span><span class="tech-badge">Flask</span><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span></div>
+        <a href="" target="_blank" class="project-link">View on GitHub <span class="arrow">&#x2192;</span></a>
       </div>
       <div class="project-card">
         <div class="project-num">02</div>
         <div class="project-date">September 2025</div>
         <h3 class="project-title">UniNotify</h3>
         <p class="project-desc">A tailor-made management system for the NITTE University community. Tracks faculty presence in real time and lets students submit feedback. Students can check live faculty availability through the portal at any time.</p>
-        <div class="project-tech">
-          <span class="tech-badge">ASP.NET Core</span><span class="tech-badge">MVC</span>
-          <span class="tech-badge">C#</span><span class="tech-badge">MS SQL Server</span>
-        </div>
+        <div class="project-tech"><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">MVC</span><span class="tech-badge">C#</span><span class="tech-badge">MS SQL Server</span></div>
         <a href="https://github.com/Darshanak11/UniNotify..git" target="_blank" class="project-link">View on GitHub <span class="arrow">&#x2192;</span></a>
       </div>
       <div class="project-card" style="border-style:dashed;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:200px;">
@@ -355,7 +342,6 @@
   </div>
 </section>
 
-<!-- EDUCATION & CERTS -->
 <section id="edu">
   <div class="wrap">
     <div class="reveal">
@@ -384,24 +370,15 @@
         <div class="cert-list">
           <div class="cert-item">
             <div class="cert-icon" style="background:rgba(0,130,255,.15)">&#x1F512;</div>
-            <div>
-              <div class="cert-name">Network Support and Security</div>
-              <div class="cert-issuer">Cisco Networking Academy</div>
-            </div>
+            <div><div class="cert-name">Network Support and Security</div><div class="cert-issuer">Cisco Networking Academy</div></div>
           </div>
           <div class="cert-item">
             <div class="cert-icon" style="background:rgba(255,153,0,.12)">&#x2601;&#xFE0F;</div>
-            <div>
-              <div class="cert-name">AWS Cloud Practitioner Fundamentals</div>
-              <div class="cert-issuer">Amazon Web Services &middot; Simplilearn</div>
-            </div>
+            <div><div class="cert-name">AWS Cloud Practitioner Fundamentals</div><div class="cert-issuer">Amazon Web Services &middot; Simplilearn</div></div>
           </div>
           <div class="cert-item">
             <div class="cert-icon" style="background:rgba(0,229,255,.1)">&#x1F40D;</div>
-            <div>
-              <div class="cert-name">Python (Basic) Certification</div>
-              <div class="cert-issuer">HackerRank</div>
-            </div>
+            <div><div class="cert-name">Python (Basic) Certification</div><div class="cert-issuer">HackerRank</div></div>
           </div>
         </div>
       </div>
@@ -409,7 +386,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-glow"></div>
   <div class="wrap">
@@ -430,6 +406,7 @@
       </a>
       <a href="tel:+918943367238" class="contact-link">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006.15 6.15l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Phone
       </a>
     </div>
   </div>
@@ -440,27 +417,18 @@
 </footer>
 
 <script>
-  /* Nav scroll */
   const nav=document.getElementById('nav');
   window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
-
-  /* Hamburger */
   const hbg=document.getElementById('hamburger'),mm=document.getElementById('mobileMenu');
   hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mm.classList.toggle('open')});
   function closeMobile(){hbg.classList.remove('open');mm.classList.remove('open')}
-
-  /* Cursor glow */
   const glow=document.getElementById('cursorGlow');
   document.addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
-
-  /* Scroll reveal */
   const obs=new IntersectionObserver(entries=>{
     entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*120)});
   },{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-  /* Typing */
-  const phrases=['web applications.','Python tools.','clean UI & UX.','cloud solutions.','.NET MVC systems.'];
+  const phrases=['web applications.','Python tools.','clean UI & UX.','cloud solutions.','.NET MVC systems.','frontend experiences.'];
   let pi=0,ci=0,del=false;
   const tel=document.getElementById('typed-text');
   function type(){
@@ -470,8 +438,6 @@
     setTimeout(type,del?42:85);
   }
   type();
-
-  /* Grid canvas */
   const cv=document.getElementById('bg-canvas'),cx=cv.getContext('2d');
   let W,H,dots=[],mx=-999,my=-999;
   const COLS=22,ROWS=12,MD=140;
